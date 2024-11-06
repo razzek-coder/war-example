@@ -18,7 +18,7 @@ pipeline {
 			steps {
 				sh 'echo $PATH'
 				sh 'docker build -t ' + params.DEPLOY_ENVIRONMENT + ' .'
-				sh 'cd ' + env.ENVS_DIR + 'docker compose up -d ' + params.DEPLOY_ENVIRONMENT
+				sh 'cd ' + env.ENVS_DIR + ' && docker compose up -d ' + params.DEPLOY_ENVIRONMENT
 			}
 		}
 	}
