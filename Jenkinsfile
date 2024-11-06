@@ -9,7 +9,7 @@ pipeline {
 	}
 
 	stages {
-		stage('Package') {
+		stage('PackageDocker') {
 			steps {
 				sh 'mvn -B -q -P docker-build clean package'
 			}
