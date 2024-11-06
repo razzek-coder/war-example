@@ -16,6 +16,7 @@ pipeline {
 		}
 		stage('deploy') {
 			steps {
+				sh 'echo $PATH'
 				sh 'docker build -t ' + params.DEPLOY_ENVIRONMENT + ' .'
 				sh 'docker compose'
 			}
