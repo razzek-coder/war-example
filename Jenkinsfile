@@ -5,7 +5,7 @@ pipeline {
 	}
 
 	parameters {
-		choice(name: 'DEPLOY_ENVIRONMENT', choices: ['qa1', 'qa2'], description: 'Ambiente de despliegue')
+		choice(name: 'DEPLOY_ENVIRONMENT', choices: ['qa1', 'qa2', 'qa3'], description: 'Ambiente de despliegue')
 	}
 
 	stages {
