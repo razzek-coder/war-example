@@ -11,7 +11,7 @@ pipeline {
 	stages {
 		stage('build') {
 			steps {
-				sh 'mvn -B -q -P docker-build package'
+				sh 'mvn -B -q -P docker-build clean package'
 			}
 		}
 		stage('deploy') {
