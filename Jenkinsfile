@@ -15,8 +15,10 @@ pipeline {
 			}
 		}
 		stage('deploy') {
-			sh 'docker build -t ' + params.DEPLOY_ENVIRONMENT + ' .'
-			sh 'docker compose'
+			steps {
+				sh 'docker build -t ' + params.DEPLOY_ENVIRONMENT + ' .'
+				sh 'docker compose'
+			}
 		}
 	}
 }
