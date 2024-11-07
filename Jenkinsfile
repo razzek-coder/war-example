@@ -16,7 +16,7 @@ pipeline {
 		}
 		stage('Deploy') {
 			steps {
-				bat 'set CATALINA_HOME="C:\\Users\\virtual\\ambientes\\tomcat1\\apache-tomcat-9.0.96"; C:\\Users\\virtual\\ambientes\\tomcat1\\apache-tomcat-9.0.96\\bin\\shutdown.bat'
+				bat 'copy target\\ROOT.war C:\\Users\\virtual\\ambientes\\tomcat1\\apache-tomcat-9.0.96\\webapps\\'
 			}
 		}
 	}
