@@ -5,7 +5,7 @@ pipeline {
 	}
 
 	parameters {
-		choice(name: 'DEPLOY_ENVIRONMENT', choices: ['none', 'tomcat2', 'tomcat3'], description: 'Ambiente de despliegue')
+		choice(name: 'DEPLOY_ENVIRONMENT', choices: ['ninguno', 'tomcat2', 'tomcat3'], description: 'Ambiente de despliegue')
 	}
 
 	stages {
@@ -17,7 +17,7 @@ pipeline {
 		stage('Deploy') {
 			when {
 				not {
-					equals expected: 'none' actual: params.DEPLOY_ENVIRONMENT
+					equals expected: 'ninguno' actual: params.DEPLOY_ENVIRONMENT
 				}
 			}
 			steps {
